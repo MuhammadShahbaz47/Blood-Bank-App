@@ -24,7 +24,14 @@ function AppNavigation() {
         options={{headerShown: false}}
         // options={myOptions} 
         />
-        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Home" component={Home}  options={{ title: 'Shaheen Blood Services', 
+        headerStyle: {
+              backgroundColor: 'rgb(216,85,81)',
+           },
+        headerTitleStyle:{
+          color:"white"
+        }
+           }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
