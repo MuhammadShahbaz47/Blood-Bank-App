@@ -16,14 +16,12 @@ const Stack = createStackNavigator();
 function AppNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-      screenOptions={{
-        headerShown: false
-      }}>
+      <Stack.Navigator>
 
         <Stack.Screen 
         name="Login" 
         component={LoginPage}
+        options={{headerShown: false}}
         // options={myOptions} 
         />
         <Stack.Screen name="Home" component={Home}/>

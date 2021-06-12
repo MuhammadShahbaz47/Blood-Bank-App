@@ -35,11 +35,12 @@ export default class MainLogin extends React.Component{
 signUp = (email,password)=>{
   try{
       if(this.state.password.length<6){
-          alert("Enter Atleast Six Characters");
+          alert("Password must be atleast 6 characters");
           return;
       }
       // alert(email)
       firebase.auth().createUserWithEmailAndPassword(email.trim(),password);
+      alert("Congratulations, your account has been successfully created.")
   }
   catch(error){
       console.log(error.toString())
@@ -58,7 +59,6 @@ login = (email,password)=>{
                alert("Login Failed!")
          })
   }
-
 
   render(props){
     const nav = this.props.navigation;
