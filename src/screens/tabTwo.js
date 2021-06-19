@@ -20,10 +20,31 @@ console.log(getData)
     <View>
      {getData && getData.map((data)=>{
        return(
-         <View>
-         <Text>{data.email}</Text>
-         <Text>{data.password}</Text>
-         </View>
+        //  <View>
+        //  <Text>{data.email}</Text>
+        //  <Text>{data.password}</Text>
+        //  </View>
+
+         <Content style={styles.cardStyle}>
+           <Card >
+             <CardItem header>
+             <Text>{data.bloodGroup}</Text>
+             </CardItem>
+             <CardItem>
+               <Body>
+                 <Text>{data.Reason}</Text>
+               </Body>
+             </CardItem>
+             <CardItem>
+               <Body>
+                 <Text>{data.Message}</Text>
+               </Body>
+             </CardItem>
+             <CardItem footer>
+               <Text>{data.HLocation}</Text>
+             </CardItem>
+          </Card>
+         </Content>
        )
      })}
     </View>
@@ -33,5 +54,8 @@ console.log(getData)
 
 
 const styles = StyleSheet.create({
-
+  cardStyle:{
+    marginLeft:10,
+    marginRight:10
+  }
 });

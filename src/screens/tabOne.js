@@ -48,33 +48,54 @@
 
 import React, {useState} from 'react';
 import {View, Text, TextInput,StyleSheet} from "react-native";
-import {Button,Container,Content, Header, Form, Item, Input, Label} from "native-base";
+import {Button,Container,Content, Header, Form, Item, Input, Label, Textarea} from "native-base";
 import database from '@react-native-firebase/database'
 import { useEffect } from 'react';
 
 function Home(props){
-  const [email,setEmail] = useState("");
-  const [password,setPassword] = useState("");
+  
+  const [bloodGroup,setBloodGroup] = useState("");
+  const [Reason,setReason] = useState("");
+  const [HLocation,setHLocation] = useState("");
+  const [Message,setMessage] = useState("");
   const save_data=()=>{
     let user={
-      email,
-      password
+      bloodGroup,
+      Reason,
+      HLocation,
+      Message
     }
     console.log("user==>",user)
-    database().ref("/").child('user').push(user)
-  }
+    database().ref("/").child('user').push(user)  
+    
+}
+
   return (
     <Container style={styles.container}>
     <Content>
       <Form>
+
       <Item floatingLabel>
-              <Label>Email</Label>
-          <Input value={email} onChangeText={(e)=>setEmail(e)} placeholder="Email Address" />
+              <Label>Blood Group</Label>
+          <Input 
+          value={bloodGroup}
+           onChangeText={(e)=>setBloodGroup(e)} placeholder="Blood Group" />
        </Item>
+
         <Item floatingLabel>
-              <Label>Password</Label>
-              <Input value={password} onChangeText={(e)=>setPassword(e)} placeholder="Password"/>
-            </Item>
+              <Label>Reason of Request</Label>
+              <Input value={Reason} onChangeText={(e)=>setReason(e)} placeholder="Reason"/>
+        </Item>
+
+        <Item floatingLabel>
+              <Label>Hospital or Location</Label>
+              <Input value={HLocation} onChangeText={(e)=>setHLocation(e)} placeholder="HLocation"/>
+        </Item>
+
+        <Form>
+              <Textarea style={styles.textArea} rowSpan={3} value={Message} onChangeText={(e)=>setMessage(e)} onPress={props.handleReset} placeholder="Message" />
+        </Form>
+
         <Button
         style={{marginTop:20}}
         full
@@ -93,6 +114,13 @@ const styles = StyleSheet.create({
   container: {
     justifyContent:"flex-start",
     padding:10
+  },
+  textArea:{
+    borderBottomColor: 'lightgray',
+    borderBottomWidth: 1,
+    marginLeft:15,
+    paddingLeft:1,
+    fontSize:17
   },
   Cards:{
     margin:20,
