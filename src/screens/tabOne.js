@@ -1,54 +1,6 @@
-// import React from 'react'
-// import { StyleSheet, View, Text } from 'react-native'
-// // import { useState } from 'react/cjs/react.production.min';
-// // import {Input, Label} from 'native-base'
-
-// export default function App() {
-// // const [fname,setfname] = useState();
-// // const [lname,setlname] = useState();
-
-// // function getfName(e){
-// // setfname(e.target.value)
-// // }
-// // function getlName(e){
-// // setlname(e.target.value)
-// // }
-  
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.dummyText}>Create your first React Native App</Text>
-//       {/* <Label>First Name</Label>
-//       <Input
-//                   autoCorrect={false}
-//                   autoCapitalize="none"
-//                   onChangeText={getfName}
-//                   />
-//                     <Label>Last Name</Label>
-//                   <Input
-//                   autoCorrect={false}
-//                   autoCapitalize="none"
-//                   onChangeText={getlName}
-//                   /> */}
-//     </View>
-//   )
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     position: 'absolute',
-//     top: '40%',
-//   },
-//   dummyText: {
-//     color: 'red',
-//     fontWeight: 'bold',
-//     fontSize: 30,
-//     textAlign: 'center'
-//   }
-// });
-
 import React, {useState} from 'react';
 import {View, Text, TextInput,StyleSheet} from "react-native";
-import {Button,Container,Content, Header, Form, Item, Input, Label, Textarea} from "native-base";
+import {Button,Container,Content, Header, Form, Item, Input, Label, Textarea } from "native-base";
 import database from '@react-native-firebase/database'
 import { useEffect } from 'react';
 
@@ -58,6 +10,7 @@ function Home(props){
   const [Reason,setReason] = useState("");
   const [HLocation,setHLocation] = useState("");
   const [Message,setMessage] = useState("");
+  
   const save_data=()=>{
     let user={
       bloodGroup,
@@ -68,6 +21,7 @@ function Home(props){
     console.log("user==>",user)
     database().ref("/").child('user').push(user)  
     
+
 }
 
   return (
@@ -120,7 +74,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginLeft:15,
     paddingLeft:1,
-    fontSize:17
+    fontSize:17,
+    textAlignVertical:'center'
   },
   Cards:{
     margin:20,
