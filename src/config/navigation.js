@@ -17,7 +17,6 @@ function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-
         <Stack.Screen 
         name="Login" 
         component={LoginPage}
