@@ -1,8 +1,8 @@
 import React ,{useState,useEffect,Component} from 'react'
-import { StyleSheet, View} from 'react-native'
+import { StyleSheet, View,Linking} from 'react-native'
 import database from '@react-native-firebase/database'
 import { ScrollView } from 'react-native-gesture-handler'
-import { Container, Header, Content, Card, CardItem, Text, Body,Left } from 'native-base';
+import { Container, Header, Content, Card, CardItem, Text, Body,Left,Button,Icon,Thumbnail } from 'native-base';
 
 
 export default function App() {
@@ -39,28 +39,29 @@ console.log(getData)
              <Text style={{fontWeight:"bold"}}> in {data.HLocation}</Text>
              </CardItem> */}
 
-             <CardItem>
+
+
+            <CardItem>
               <Left>
+              <Thumbnail source={require('../images/face.png')} />
                 <Body>
+                  <Text style={{paddingLeft:1}}>{data.Name}</Text>
                   <Text><Text style={{color:"rgb(80,80,80)"}}>looking for {data.bloodGroup} in </Text><Text style={{fontWeight:"bold",color:"rgb(80,80,80)"}}>{data.HLocation}</Text></Text>
                   <Text note style={{color:"gray"}}>{date}/{month}/{year}</Text>
                 </Body>
               </Left>
             </CardItem>
-
-             <CardItem>
-               <Body>
-                 <Text>{data.Reason}</Text>
-               </Body>
-             </CardItem>
+             
              <CardItem>
                <Body>
                  <Text>{data.Message}</Text>
                </Body>
              </CardItem>
-             <CardItem footer>
-               <Text>{data.HLocation}</Text>
-             </CardItem>
+
+              <Button full danger>
+              {/* <Icon name="logo-github" /> */}
+                <Text onPress={()=>{Linking.openURL(`tel:${data.CNumber}`);}}>Contact</Text>
+              </Button>
           </Card>
          </Content>
        )

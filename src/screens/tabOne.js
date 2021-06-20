@@ -6,17 +6,19 @@ import { useEffect } from 'react';
 
 function Home(props){
   
+  const [Name,setName] = useState("");
+  const [CNumber,setCNumber] = useState("");
   const [bloodGroup,setBloodGroup] = useState("");
-  const [Reason,setReason] = useState("");
   const [HLocation,setHLocation] = useState("");
   const [Message,setMessage] = useState("");
   
   const save_data=()=>{
     let user={
+      Name,
       bloodGroup,
-      Reason,
       HLocation,
-      Message
+      Message,
+      CNumber
     }
     console.log("user==>",user)
     database().ref("/").child('user').push(user)  
@@ -30,16 +32,21 @@ function Home(props){
       <Form>
 
       <Item floatingLabel>
+              <Label>Name</Label>
+              <Input value={Name} onChangeText={(e)=>setName(e)} placeholder="Name"/>
+        </Item>
+
+      <Item floatingLabel>
+              <Label>Contact Number</Label>
+              <Input value={CNumber} onChangeText={(e)=>setCNumber(e)} placeholder="CNumber"/>
+      </Item>
+
+      <Item floatingLabel>
               <Label>Blood Group</Label>
           <Input 
           value={bloodGroup}
            onChangeText={(e)=>setBloodGroup(e)} placeholder="Blood Group" />
        </Item>
-
-        <Item floatingLabel>
-              <Label>Reason of Request</Label>
-              <Input value={Reason} onChangeText={(e)=>setReason(e)} placeholder="Reason"/>
-        </Item>
 
         <Item floatingLabel>
               <Label>Hospital or Location</Label>

@@ -9,12 +9,12 @@ export default class CardItemBordered extends Component {
         <Content padder>
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Burhani Blood Bank</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Burhani+Blood+Bank');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Burhani Blood Bank</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> Saifee Rd, Block F North Nazimabad Town, Karachi, Karachi City, Sindh
+                <Text style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Burhani+Blood+Bank');}}> Saifee Rd, Block F North Nazimabad Town, Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
@@ -26,12 +26,12 @@ export default class CardItemBordered extends Component {
 
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Husaini Blood Bank</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Husaini+Blood+Bank');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Husaini Blood Bank</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> Green Mosque, Mahajir Camp, Baldia Town, Karachi, Karachi City, Sindh
+                <Text style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Husaini+Blood+Bank');}}> Green Mosque, Mahajir Camp, Baldia Town, Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
@@ -43,12 +43,12 @@ export default class CardItemBordered extends Component {
 
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Fatmid Foundation</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Fatmid+foundation');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Fatmid Foundation</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> Garden East Karachi, Karachi City, Sindh
+                <Text  style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=Fatmid+foundation');}}> Garden East Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
@@ -60,12 +60,12 @@ export default class CardItemBordered extends Component {
 
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>NIBD Blood Bank</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=NIBD+Blood+Bank');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>NIBD Blood Bank</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> National Stadium Colony, Karachi, Karachi City, Sindh
+                <Text style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=NIBD+Blood+Bank');}}> National Stadium Colony, Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
@@ -77,12 +77,12 @@ export default class CardItemBordered extends Component {
 
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>PWA Blood Bank</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=PWA+Blood+Bank');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>PWA Blood Bank</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> New Labour Colony Nanakwara, Karachi, Karachi City, Sindh
+                <Text  style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=PWA+Blood+Bank');}}> New Labour Colony Nanakwara, Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
@@ -94,12 +94,12 @@ export default class CardItemBordered extends Component {
 
           <Card>
             <CardItem header bordered>
-              <Text style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Dow Blood Bank</Text>
+              <Text onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=DOW+Blood+Bank');}} style={{fontWeight:"bold",color:"rgb(216,85,81)"}}>Dow Blood Bank</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
                 <Text>
-                <Text style={{fontWeight:"bold"}}>Address:</Text> Gulzar-e-Hijri Gulshan-e-Iqbal, Karachi, Karachi City, Sindh
+                <Text style={{fontWeight:"bold"}}>Address:</Text><Text style={{color:"#3c51bc"}} onPress={()=>{Linking.openURL('https://www.google.com/maps/search/?api=1&query=DOW+Blood+Bank');}}> Gulzar-e-Hijri Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</Text>
                 </Text>
               </Body>
             </CardItem>
