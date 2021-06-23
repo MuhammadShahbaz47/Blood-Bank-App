@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, TextInput,StyleSheet} from "react-native";
-import {Button,Container,Content, Header, Form, Item, Input, Label, Textarea } from "native-base";
+import {Text,StyleSheet} from "react-native";
+import {Button,Container,Content, Form, Item, Input, Label, Textarea } from "native-base";
 import database from '@react-native-firebase/database'
-import { useEffect } from 'react';
 
 function Home(props){
   

@@ -6,23 +6,16 @@ import Home from '../screens/Home';
 
 const Stack = createStackNavigator();
 
-// const myOptions={
-//   title:"Welcome to Shaheen Blood Services",
-//   headerTintColor:"white",
-//   headerStyle:{
-//   backgroundColor:"red"
-//   }
-// }
 function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen 
+        <Stack.Screen 
         name="Login" 
         component={LoginPage}
         options={{headerShown: false}}
         // options={myOptions} 
-        /> */}
+        />
         <Stack.Screen name="Home" component={Home}  options={{ title: 'Shaheen Blood Services',headerShown:false, 
         headerStyle: {
               backgroundColor: 'rgb(216,85,81)',

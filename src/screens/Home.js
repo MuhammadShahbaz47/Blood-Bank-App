@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Header, Tab, Tabs, TabHeading, Icon, Text,Left,Right,Button,Body,Title } from 'native-base';
+import { Container, Header, Tab, Tabs, Text,Right,Button,Body,Title } from 'native-base';
 import Tab1 from './tabOne';
 import Tab2 from './tabTwo';
 import Tab3 from './tabThree';
-import LoginPage from './LoginPage';
 
 export default class TabsAdvancedExample extends Component {
   render() {

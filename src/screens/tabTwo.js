@@ -1,9 +1,8 @@
-import React ,{useState,useEffect,Component} from 'react'
-import { StyleSheet, View,Linking} from 'react-native'
+import React ,{useState,useEffect} from 'react'
+import { StyleSheet, View,Linking,ActivityIndicator} from 'react-native'
 import database from '@react-native-firebase/database'
 import { ScrollView } from 'react-native-gesture-handler'
-import { Container, Header, Content, Card, CardItem, Text, Body,Left,Button,Icon,Thumbnail } from 'native-base';
-
+import {Content, Card, CardItem, Text, Body,Left,Button,Thumbnail } from 'native-base';
 
 export default function App() {
 
@@ -24,6 +23,7 @@ export default function App() {
   return(
     <ScrollView>
     <View>
+    <ActivityIndicator style={{justifyContent:"center"}} size="large" color="red" />
      {getData && getData.map((data)=>{
        return(
         //  <View>
@@ -33,14 +33,6 @@ export default function App() {
 
          <Content style={styles.cardStyle}>
            <Card >
-             {/* <CardItem header>
-            <Text style={{color:"gray"}}>looking for </Text>
-             <Text>{data.bloodGroup}</Text>
-             <Text style={{fontWeight:"bold"}}> in {data.HLocation}</Text>
-             </CardItem> */}
-
-
-
             <CardItem>
               <Left>
               <Thumbnail source={require('../images/face.png')} />

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import {StyleSheet} from "react-native";
-import { Container, Header, Content, Card, CardItem, Text, Body, H1 } from "native-base";
+import { Container, Content, Card, CardItem, Text, Body } from "native-base";
 import {Linking} from 'react-native';
 export default class CardItemBordered extends Component {
   render() {

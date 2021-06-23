@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, StyleSheet,Image} from "react-native";
-import database from '@react-native-firebase/database'
+import React from 'react';
+import { Text, StyleSheet,Image} from "react-native";
 import { LoginManager,AccessToken  } from "react-native-fbsdk";
 import auth from '@react-native-firebase/auth'
-import { TouchableHighlight, TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity} from 'react-native-gesture-handler';
 import * as firebase from 'firebase';
-import {Container,Content,Header,Form,Input,Item,Button,Label,Icon} from 'native-base';
+import {Container,Form,Input,Item,Button,Label} from 'native-base';
 
 var firebaseConfig = {
   apiKey: "AIzaSyD-IM6Hs446sUIr-cUZinwYJ1YuR2GXO60",
