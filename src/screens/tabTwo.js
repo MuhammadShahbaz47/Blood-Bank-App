@@ -13,14 +13,14 @@ export default function App() {
     database().ref('user').on('value', (data)=>{
       setgetData(Object.values(data.val())
      ) })
-     console.log(getData)
+    //  console.log(getData)
   })
 
   var date = new Date().getDate();
   var month = new Date().getMonth() + 1;
   var year = new Date().getFullYear();
 
-console.log(getData)
+// console.log(getData)
   return(
     <ScrollView>
     <View>
@@ -60,7 +60,7 @@ console.log(getData)
 
               <Button full danger>
               {/* <Icon name="logo-github" /> */}
-                <Text onPress={()=>{Linking.openURL(`tel:${data.CNumber}`);}}>Contact</Text>
+                <Text onPress={()=>{Linking.openURL(`tel:${data.CNumber}`);}}>Donate</Text>
               </Button>
           </Card>
          </Content>

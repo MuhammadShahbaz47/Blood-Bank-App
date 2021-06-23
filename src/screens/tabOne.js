@@ -20,9 +20,9 @@ function Home(props){
       Message,
       CNumber
     }
-    console.log("user==>",user)
+    // console.log("user==>",user)
     database().ref("/").child('user').push(user)  
-    
+    alert("Request Sent Successfully")
 
 }
 
@@ -30,6 +30,9 @@ function Home(props){
     <Container style={styles.container}>
     <Content>
       <Form>
+
+        <Text danger style={{textAlign:"center",color:"rgb(216,85,81)",fontWeight:"bold",fontSize:30,marginTop:2}}>POST BLOOD REQUEST</Text>
+        <Text style={{textAlign:"center",color:"gray",fontSize:18,marginTop:5}}>FILL UP THE FORM BELOW TO POST REQUEST</Text>
 
       <Item floatingLabel>
               <Label>Name</Label>
